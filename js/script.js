@@ -4,8 +4,8 @@ var message = ('<p id="message">'+ "Click on the book image to get more info"+ '
 var errormessage = '<p id="error1">' + "Hoops! There\'s been a network error" + "Pls try again later" +'</p>';
 BookWizard = {
 	base: "https://www.googleapis.com/books/v1/volumes",
-	base1:"https://www.googleapis.com/books/v1/volumes?q=General",
-	params:{q: "", orderBy: 'newest'},
+	base1:"https://www.googleapis.com/books/v1/volumes?q=e&orderBy=newest", 
+	params:{q: "", maxResults: 40},
 	searchBookField: null,
 	searchButton: null,
 	bookResult: null,
