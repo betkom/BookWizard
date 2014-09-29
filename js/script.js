@@ -32,7 +32,7 @@ BookWizard = {
 	},
 	getMore: function (elems) {		     
         $('.bookPreview').empty();
-        $('.bookPreview').append('<img class="state1" src="img/loading.gif"/>');
+        $('.bookPreview').append('<img class="state1" src="img/loading.GIF"/>');
 		$.getJSON(BookWizard.base + '/' + elems, function(response){
 			BookWizard.loadMore(response);
 		}).fail(function(failure){
@@ -116,7 +116,7 @@ BookWizard = {
 	search: function(bookName){
 		BookWizard.params.q = bookName;
 		$('#bookResult').empty();
-		$('#bookResult').append('<img class="state" src="img/loading.gif"/>');
+		$('#bookResult').append('<img class="state" src="img/loading.GIF"/>');
 		$.getJSON(BookWizard.base,BookWizard.params, function(response){
 			BookWizard.loadBooks(response);
 		}).fail(function(failure){
@@ -125,7 +125,7 @@ BookWizard = {
 	},
 	loadBooks: function(response){
 		if (response.totalItems < 1){
-			$('#bookResult').append('<div class="error">' + '<h1>'+ "No Result Found" + '</h1>' +'<img class="state2" src="img/ohno.gif"/>' + '</div>');
+			$('#bookResult').append('<div class="error">' + '<h1>'+ "No Result Found" + '</h1>' +'<img class="state2" src="img/ohno.GIF"/>' + '</div>');
 			$('.state').hide();
 			BookWizard.searchBookField.prop("disabled", false);
 			BookWizard.searchButton.attr("disabled", false);
